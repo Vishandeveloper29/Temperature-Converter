@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="aurora">
+        <div class="aurora-blob"></div>
+        <div class="aurora-blob"></div>
+        <div class="aurora-blob"></div>
+    </div>
+
+    <div class="card">
+        <p class="tag">Unit Converter</p>
+        <h1>Temper<span>ature</span></h1>
+
+        <p class="lbl">Input unit</p>
+        <div class="unit-row">
+            <div class="tab active" data-unit="c" onclick="setUnit('c')">°C</div>
+            <div class="tab" data-unit="f" onclick="setUnit('f')">°F</div>
+            <div class="tab" data-unit="k" onclick="setUnit('k')">K</div>
+        </div>
+
+        <p class="lbl">Temperature</p>
+        <div class="input-wrap" id="input-wrap">
+            <input type="number" id="val" placeholder="0" oninput="convert()" autofocus>
+            <span class="from-sym" id="from-sym">°C</span>
+        </div>
+
+        <div class="results" id="results">
+            <div class="r-row" id="row-c">
+                <div class="r-dot" id="dot-c"></div>
+                <span class="r-name">Celsius</span>
+                <span class="r-val" id="r-c">—</span>
+                <span class="r-unit">°C</span>
+            </div>
+            <div class="r-row" id="row-f">
+                <div class="r-dot" id="dot-f"></div>
+                <span class="r-name">Fahrenheit</span>
+                <span class="r-val" id="r-f">—</span>
+                <span class="r-unit">°F</span>
+            </div>
+            <div class="r-row" id="row-k">
+                <div class="r-dot" id="dot-k"></div>
+                <span class="r-name">Kelvin</span>
+                <span class="r-val" id="r-k">—</span>
+                <span class="r-unit">K</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>°C</span>
+            <div class="footer-dot"></div>
+            <span>°F</span>
+            <div class="footer-dot"></div>
+            <span>K</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
